@@ -14,21 +14,20 @@ function App() {
   }
 
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
+    <div className='container'>
       <h1>Simple URL Shortener</h1>
       <input
         type="text"
         placeholder="Enter a long URL"
         value={url}
         onChange={(e) => setUrl(e.target.value)}
-        style={{ padding: '0.5rem', width: '300px' }}
       />
-      <button onClick={handleShorten} style={{ marginLeft: '1rem', padding: '0.5rem' }}>
+      <button onClick={handleShorten}>
         Shorten
       </button>
 
       {shortUrl && (
-        <div style={{ marginTop: '1rem' }}>
+        <div className='short-url'>
           <strong>Short URL:</strong> <a href={url} target="_blank" rel="noreferrer">{shortUrl}</a>
         </div>
       )}
